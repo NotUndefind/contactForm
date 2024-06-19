@@ -1,52 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<title>Contact form</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Contact Us</h1>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+			<form action="">
+				<div class="nameInput">
+					<div>
+						<label for="firstname">First Name</label>
+						<input
+							type="text"
+							name="firstname"
+							id="firstname"
+							required
+						/>
+					</div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+					<div>
+						<label for="lastname">Last Name</label>
+						<input
+							type="text"
+							name="lastname"
+							id="lastname"
+							required
+						/>
+					</div>
+				</div>
 
-  Contact Us
+				<div class="emailInput">
+					<label for="email">Email Address</label>
+					<input type="email" name="email" id="email" required />
+				</div>
 
-  First Name
-  This field is required
+				<label for="queryType">Query Type</label>
+				<div class="queryType">
+					<div class="generalInput">
+						<input type="radio" name="gender" id="generalEnquiry" />
+						<p>General Enquiry</p>
+					</div>
 
-  Last Name
-  This field is required
+					<div class="supportInput">
+						<input type="radio" name="gender" id="supportRequest" />
+						<p>Support Request</p>
+					</div>
+				</div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+				<label for="message">Message</label>
+				<div class="messageInput">
+					<textarea name="message" id="message" required></textarea>
+				</div>
 
-  Query Type
-  General Enquiry
-  Support Request
+				<div class="contactedInput">
+					<input type="checkbox" name="contacted" id="contacted" />
+					<label for="contacted"
+						>I consent to being contacted by the team</label
+					>
+				</div>
+
+				<input id="submit" type="submit" value="Submit" />
+			</form>
+		</div>
+
+		<!-- Please enter a valid email address
+
   Please select a query type
 
-  Message
-  This field is required
-
-  I consent to being contacted by the team
   To submit this form, please consent to being contacted
 
-  Submit
-
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  Thanks for completing the form. We'll be in touch soon! -->
+	</body>
 </html>
